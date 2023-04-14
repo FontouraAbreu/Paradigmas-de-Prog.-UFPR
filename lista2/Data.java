@@ -5,6 +5,18 @@ public class Data {
     private int mes;
     private int ano;
 
+    public int GetDia() {
+        return this.dia;
+    }
+
+    public int GetMes() {
+        return this.mes;
+    }
+
+    public int GetAno() {
+        return this.ano;
+    }
+
     // set the day
     public void setDia(int dia) {
         // if the day is invalid, return 0

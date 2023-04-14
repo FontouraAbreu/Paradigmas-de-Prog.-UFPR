@@ -2,16 +2,11 @@ import java.time.LocalDate;
 
 public class Pessoa {
     private String nome;
-    private int idade;
-    private int dia;
-    private int mes;
-    private int ano;
+    private Data data;
 
-    public void nascer(String nome, int dia, int mes, int ano) {
+    public void nascer(String nome, Data data) {
         this.nome = nome;
-        this.dia = dia;
-        this.mes = mes;
-        this.ano = ano;
+        this.data = data;
     }
 
     public String retornarNome() {
@@ -19,12 +14,12 @@ public class Pessoa {
     }
 
     public int retornarIdade() {
-        return this.calcularIdade(this.ano, this.mes, this.dia);
+        return this.calcularIdade(this.data);
     }
 
-    public int calcularIdade(int ano, int mes, int dia) {
+    public int calcularIdade(Data data) {
         LocalDate todayDate = LocalDate.now();
-        LocalDate personBirthdate = LocalDate.of(ano, mes, dia);
+        LocalDate personBirthdate = LocalDate.of(data.GetAno(), data.GetMes(), data.GetDia());
         return todayDate.getYear() - personBirthdate.getYear();
     }
 }

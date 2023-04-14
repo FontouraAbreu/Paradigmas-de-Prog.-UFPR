@@ -6,9 +6,15 @@ public class Principal {
         Vector<Pessoa> pessoas = new Vector<Pessoa>();
 
         Pessoa grace = new Pessoa();
-        grace.nascer("Grace Hopper", 9, 12, 1906);
+        Data data1 = new Data();
+        data1.ajustarData(9, 11, 1906);
+        grace.nascer("Grace Hopper", data1);
+
         Pessoa ada = new Pessoa();
-        ada.nascer("Ada Lovelace", 10, 12, 1815);
+        Data data2 = new Data();
+        data2.ajustarData(10, 11, 1815);
+        ada.nascer("Ada Lovelace", data2);
+
         // append the object to the vector
         pessoas.add(grace);
         pessoas.add(ada);
