@@ -1,13 +1,38 @@
 public class Contador {
-    int valorInicial;
-    int valorFinal;
-    int passo;
+    private int valorInicial;
+    private int valorFinal;
 
-    public Contador(int valorInicial, int valorFinal, int passo) {
-
+    // CONSTRUCTORS
+    public Contador() {
+        setValorInicial(0);
     }
 
+    public Contador(int valorFinal) {
+        setValorFinal(valorFinal);
+    }
+
+    // SETTERS
     public void setValorInicial(int valorInicial) {
-        this
+        if (valorInicial < 0)
+            this.valorInicial = 0;
+        this.valorInicial = valorInicial;
     }
+
+    public void setValorFinal(int valorFinal) {
+        if (valorFinal == getValorInicial())
+            return;
+        this.valorFinal = valorFinal;
+    }
+
+    // GETTERS
+    public int getValorInicial() {
+        return this.valorInicial;
+    }
+
+    public int getValorFinal() {
+        return this.valorFinal;
+    }
+
+    // METHODS
+
 }
