@@ -34,5 +34,16 @@ public class Contador {
     }
 
     // METHODS
+    public void zerar() {
+        setValorInicial(0);
+    }
+
+    public void incrementar() {
+        setValorInicial(getValorInicial() + 1);
+    }
+
+    public void decrementar() {
+        setValorInicial(getValorInicial() - 1);
+    }
 
 }
