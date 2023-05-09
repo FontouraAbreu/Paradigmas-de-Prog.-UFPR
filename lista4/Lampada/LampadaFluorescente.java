@@ -1,3 +1,5 @@
+package Lampada;
+
 public class LampadaFluorescente extends Lampada {
     private int size;
 

@@ -1,3 +1,5 @@
+package Lampada;
+
 import java.util.Scanner;
 
 public class Principal {
